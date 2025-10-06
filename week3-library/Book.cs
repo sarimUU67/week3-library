@@ -22,10 +22,22 @@ namespace week3_library
             book.Author = "BillGates";
             book.ISBN = "12345678";
 
-            // Outputting the info to the console
+            // New instance called 'book1'
+            Book book1 = new Book();
+            book1.Title = "C# Methods and classes";
+            book1.Author = "Microsoft";
+            book1.ISBN = "55667778";
+
+            // Output the info for 'book' to the console
             Console.WriteLine($"Book title: {book.Title}");
             Console.WriteLine($"Book author: {book.Author}");
             Console.WriteLine($"Book ISBN: {book.ISBN}");
+            Console.WriteLine();
+
+            // Output the infor for 'book1' to the console
+            Console.WriteLine($"Book title: {book1.Title}");
+            Console.WriteLine($"Book author: {book1.Author}");
+            Console.WriteLine($"Book ISBN: {book1.ISBN}");
 
         }
     }
