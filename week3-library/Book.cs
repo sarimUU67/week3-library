@@ -12,6 +12,14 @@ namespace week3_library
         string Author;
         string ISBN;
 
+        // Create a constructor for object 'Book'
+        public Book(string bookTitle, string bookAuthor, string bookISBN)
+        {
+            Title = bookTitle;
+            Author = bookAuthor;
+            ISBN = bookISBN;
+        }
+
         void DisplayInfo()
         {
             Console.WriteLine($"Book title: {Title}");
@@ -23,18 +31,10 @@ namespace week3_library
         static void Main(string[] args)
         {
             // Creating a new instance of the Book class
-            Book book = new Book();
-
-            // Info on the book in our library
-            book.Title = "C# for beginners";
-            book.Author = "BillGates";
-            book.ISBN = "12345678";
+            Book book = new Book("C# for beginners", "Bill Gates", "12345678");
 
             // New instance called 'book1'
-            Book book1 = new Book();
-            book1.Title = "C# Methods and classes";
-            book1.Author = "Microsoft";
-            book1.ISBN = "55667778";
+            Book book1 = new Book("C# Methods and Classes", "Microsoft", "55667778");
 
             // Output the book information to the console
             book.DisplayInfo();
