@@ -12,6 +12,14 @@ namespace week3_library
         string Author;
         string ISBN;
 
+        void DisplayInfo()
+        {
+            Console.WriteLine($"Book title: {Title}");
+            Console.WriteLine($"Book author: {Author}");
+            Console.WriteLine($"Book ISBN: {ISBN}");
+            Console.WriteLine();
+        }
+
         static void Main(string[] args)
         {
             // Creating a new instance of the Book class
@@ -28,17 +36,9 @@ namespace week3_library
             book1.Author = "Microsoft";
             book1.ISBN = "55667778";
 
-            // Output the info for 'book' to the console
-            Console.WriteLine($"Book title: {book.Title}");
-            Console.WriteLine($"Book author: {book.Author}");
-            Console.WriteLine($"Book ISBN: {book.ISBN}");
-            Console.WriteLine();
-
-            // Output the infor for 'book1' to the console
-            Console.WriteLine($"Book title: {book1.Title}");
-            Console.WriteLine($"Book author: {book1.Author}");
-            Console.WriteLine($"Book ISBN: {book1.ISBN}");
-
+            // Output the book information to the console
+            book.DisplayInfo();
+            book1.DisplayInfo();
         }
     }
 }
